@@ -47,7 +47,7 @@ def get_argument_parser():
     parser.add_argument(
         '--log-level',
         choices=['debug', 'info', 'warning', 'error', 'critical'],
-        default='info',
+        default='debug',
         help='level of logging (default: %(default)s)'
     )
     parser.add_argument(

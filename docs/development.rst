@@ -11,3 +11,11 @@ If you want to setup a development environment, you are in need of `pipenv <http
    pipenv run python setup.py develop
    pipenv shell
    cryptolyze -h
+
+
+cryptolyze ssh2 ciphers 10.223.40.7
+cryptolyze tls all 10.223.40.7
+
+
+cryptolyze ssh2 ciphers 192.168.1.4
+cryptolyze tls all 192.168.1.4

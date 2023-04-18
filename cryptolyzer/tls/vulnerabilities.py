@@ -144,6 +144,13 @@ class AnalyzerResultVulnerabilityDHParams(object):
         logjam = dhparam is not None and dhparam.key_size <= 1024
         dheat = ((dhparam is not None and dhparam.key_size > 4096) or
                  (max([group.value.named_group.value.size for group in groups] + [0]) > 4096))
+        if dhparam is not None:
+            print(f"dhparam {dhparam.key_size}")
+        else:
+            print("no dhparam")
+        print("in dheat")
+        for group in groups:
+            print(f"dxx {group.value.named_group.value.name} {group.value.named_group.value.size}")
 
         return AnalyzerResultVulnerabilityDHParams(
             logjam=logjam,
